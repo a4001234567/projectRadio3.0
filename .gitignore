@@ -1,0 +1,51 @@
+# Python
+__pycache__/
+*.py[cod]
+*.pyo
+*.pyd
+.Python
+*.egg-info/
+dist/
+build/
+.eggs/
+
+# Virtual environments
+.venv/
+venv/
+env/
+
+# Jupyter
+.ipynb_checkpoints/
+
+# Data — matrices and results are generated, not tracked
+data/matrices/*
+data/results/*
+!data/matrices/.gitkeep
+!data/results/.gitkeep
+
+# Output directories from construction scripts
+codegen/constructions/output/
+
+# Simulation result files
+*-AWGN.txt
+*_BEC_output.txt
+*_output.txt
+
+# Temporary / test matrices
+*.zip
+*.txt
+!data/**
+
+# Claude Code
+.claude/
+
+# macOS
+.DS_Store
+
+# IDE
+.vscode/
+.idea/
+*.swp
+
+# Numba cache
+__numba_cache__/
