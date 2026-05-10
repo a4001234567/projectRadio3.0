@@ -211,7 +211,7 @@ _preprocessor = _neglect('[',']')
 
 def _anysum(*to_add):
     if 0 == len(to_add):
-        return None
+        raise ValueError("Empty list to add")
     elif 1 == len(to_add):
         return to_add[0]
     return _anysum(to_add[0]+to_add[1],*to_add[2:])
@@ -263,12 +263,18 @@ def _readMatrixCoords(contents:str)-> Tuple[np.ndarray,np.ndarray,np.ndarray,int
         elif line.startswith('.'): # Modifier line
             if line.startswith('.sparse'):
                 mode = 'sparse'
-                h,w = sparse_header_finder.match(line).groups()
+                matchResult = sparse_header_finder.match(line)
+                if matchResult is None:
+                    raise ValueError(f"Invalid sparse header: {line}")
+                h,w = matchResult.groups()
                 h,w = map(int,(h,w))
             elif line.startswith('.diff'):
                 mode = 'diff'
-                h,w = diff_header_finder.match(line).groups()
-                h,w = map(int,(h,w))
+                matchResult = diff_header_finder.match(line)
+                if matchResult is None:
+                    raise ValueError(f"Invalid diff header: {line}")
+                h_diff,w_diff = matchResult.groups()
+                h_diff,w_diff = map(int,(h_diff,w_diff))
             elif line.startswith('.nonbinary'):
                 fieldSize = int(line.split(':')[1])
             else:
@@ -338,14 +344,20 @@ def _read_matrix(contents:str, outputFieldSize:bool=False)->Union[np.ndarray,Tup
         elif line.startswith('.'): # Modifier line
             if line.startswith('.sparse'):
                 mode = 'sparse'
-                h,w = sparse_header_finder.match(line).groups()
+                matchResult = sparse_header_finder.match(line)
+                if matchResult is None:
+                    raise ValueError(f"Invalid sparse header: {line}")
+                h,w = matchResult.groups()
                 h,w = map(int,(h,w))
                 board = np.zeros((h,w),dtype='int8')
             elif line.startswith('.diff'):
                 mode = 'diff'
-                h,w = diff_header_finder.match(line).groups()
-                h,w = map(int,(h,w))
-                board = np.zeros((h,w),dtype='int8')
+                matchResult = diff_header_finder.match(line)
+                if matchResult is None:
+                    raise ValueError(f"Invalid diff header: {line}")
+                h_diff,w_diff = matchResult.groups()
+                h_diff,w_diff = map(int,(h_diff,w_diff))
+                board = np.zeros((h_diff,w_diff),dtype='int8')
             elif line.startswith('.nonbinary'):
                 fieldSize = int(line.split(':')[1])
         else: # Data line

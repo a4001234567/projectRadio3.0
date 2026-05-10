@@ -14,21 +14,21 @@ def two_side_mod(x,modp):
     return min(x,modp-x)
 
 @lru_cache(maxsize=65536)
-def calculate_characteristic(ruler: 'CircularRuler', cnt_rows: int) -> Tuple[set]:
-    result = [ruler.bins]
+def calculate_characteristic(ruler: 'CircularRuler', cnt_rows: int) -> Tuple[set[int],...]:
+    result:List[set[int]] = [ruler.bins]
     shifted_ruler = ruler
     for _ in range(1,cnt_rows):
         shifted_ruler = shifted_ruler << 1
         result.append(shifted_ruler-ruler)
     return tuple(result)
 
-def check_collide(charA:List[set],charB:List[set]):
+def check_collide(charA:List[set[int]],charB:List[set[int]]):
     for sA,sB in zip(charA,charB):
         if not sA.isdisjoint(sB):
             return True
     return False
 
-def add_char(charA:List[set],charB:List[set]):
+def add_char(charA:List[set[int]],charB:List[set[int]]):
     return [sA.union(sB) for sA,sB in zip(charA,charB)]
 
 def find_viable_combinations(cur_characteristic,remaining_choices,cap,cnt_rows)->Union[List['CircularRuler'], bool]:
