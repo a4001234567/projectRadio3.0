@@ -1,0 +1,38 @@
+================================================================
+Example 1 — Vandermonde J=13, L=67, block_size=67
+================================================================
+
+[unpunctured]  shape=(871, 4489)
+  design rate   = 0.805970  (1 - 13/67)
+  col-deg range : 13 – 13
+  row-deg range : 67 – 67
+  GF(2) rank    = 859   (took 0.8s)
+  k             = 3630
+  actual rate   = 0.808643
+  6-cycles      : 84,734,364   (took 1.7s)
+  8-cycles     : TIMEOUT after 55s
+  10-cycles     : TIMEOUT after 55s
+
+[punctured]  shape=(858, 4422)
+  design rate   = 0.805970  (1 - 13/67)
+  col-deg range : 12 – 13
+  row-deg range : 66 – 67
+  GF(2) rank    = 858   (took 0.8s)
+  k             = 3564
+  actual rate   = 0.805970
+  6-cycles      : 77,878,020   (took 1.5s)
+  8-cycles     : TIMEOUT after 55s
+  10-cycles     : TIMEOUT after 55s
+
+[peg]  shape=(871, 4489)
+  design rate   = 0.805970  (1 - 13/67)
+  col-deg range : 13 – 13
+  row-deg range : 66 – 69
+  GF(2) rank    = 871   (took 1.0s)
+  k             = 3618
+  actual rate   = 0.805970
+  6-cycles      : 92,841,575   (took 1.7s)
+  8-cycles     : TIMEOUT after 55s
+  10-cycles     : TIMEOUT after 55s
+
+================================================================
