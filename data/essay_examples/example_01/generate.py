@@ -31,12 +31,12 @@ writer(os.path.join(out, 'vandermonde_unpunctured.zip'), H_unpunct,
        comments=[f'Vandermonde J={J} L={L} P={block_size} truncate=0'])
 
 # ── 2. Punctured ──────────────────────────────────────────────────────────────
-H_punct = writeNDarray(grid, block_size, truncate=3).astype(np.uint8)
+H_punct = writeNDarray(grid, block_size, truncate=1).astype(np.uint8)
 print(f'Punctured   : {H_punct.shape}  '
       f'col-deg={np.unique(H_punct.sum(0))}  row-deg={np.unique(H_punct.sum(1))}')
 writer(os.path.join(out, 'vandermonde_punctured.zip'), H_punct,
        mode='sparse', compress=True,
-       comments=[f'Vandermonde J={J} L={L} P={block_size} truncate=3'])
+       comments=[f'Vandermonde J={J} L={L} P={block_size} truncate=1'])
 
 # ── 3. PEG (matched to unpunctured degree sequence) ───────────────────────────
 nchk, nvar = H_unpunct.shape
