@@ -10,8 +10,8 @@ Example 2 — Vandermonde J=3, L=13, block_size=67
   k             = 660
   actual rate   = 0.769231
   6-cycles      : 4,554   (took 0.0s)
-  8-cycles     : 126,813   (took 0.8s)
-  10-cycles     : 1,318,871   (took 15.0s)
+  8-cycles     : 126,813   (took 1.5s)
+  10-cycles     : 1,318,871   (took 29.0s)
 
 [6-free]  shape=(198, 858)
   design rate   = 0.769231  (1 - 3/13)
@@ -21,18 +21,18 @@ Example 2 — Vandermonde J=3, L=13, block_size=67
   k             = 660
   actual rate   = 0.769231
   6-cycles      : 0   (took 0.0s)
-  8-cycles     : 51,447   (took 0.8s)
-  10-cycles     : 655,128   (took 15.0s)
+  8-cycles     : 51,447   (took 1.5s)
+  10-cycles     : 655,128   (took 27.8s)
 
 [peg]  shape=(198, 858)
   design rate   = 0.769231  (1 - 3/13)
   col-deg range : 2 – 3
   row-deg range : 12 – 14
-  GF(2) rank    = 198   (took 0.0s)
+  GF(2) rank    = 198   (took 0.1s)
   k             = 660
   actual rate   = 0.769231
-  6-cycles      : 779   (took 0.0s)
-  8-cycles     : 44,880   (took 1.0s)
-  10-cycles     : 724,162   (took 18.2s)
+  6-cycles      : 745   (took 0.0s)
+  8-cycles     : 44,816   (took 1.8s)
+  10-cycles     : 725,446   (took 33.9s)
 
 ================================================================
