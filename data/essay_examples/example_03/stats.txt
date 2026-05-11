@@ -1,0 +1,38 @@
+================================================================
+Example 3 — BR vs Vandermonde J=5, L=37, P=37 (block=36)
+================================================================
+
+[vandermonde (punctured)]  shape=(180, 1332)
+  design rate   = 0.864865  (1 - 5/37)
+  col-deg range : 4 – 5
+  row-deg range : 36 – 37
+  GF(2) rank    = 180   (took 0.0s)
+  k             = 1152
+  actual rate   = 0.864865
+  6-cycles      : 431,064   (took 0.0s)
+  8-cycles     : TIMEOUT after 55s
+  10-cycles     : TIMEOUT after 55s
+
+[BR]  shape=(180, 1332)
+  design rate   = 0.864865  (1 - 5/37)
+  col-deg range : 5 – 40
+  row-deg range : 37 – 72
+  GF(2) rank    = 180   (took 0.0s)
+  k             = 1152
+  actual rate   = 0.864865
+  6-cycles      : 1,438,899,480   (took 0.0s)
+  8-cycles     : TIMEOUT after 55s
+  10-cycles     : TIMEOUT after 55s
+
+[PEG]  shape=(180, 1332)
+  design rate   = 0.864865  (1 - 5/37)
+  col-deg range : 4 – 5
+  row-deg range : 35 – 37
+  GF(2) rank    = 180   (took 0.1s)
+  k             = 1152
+  actual rate   = 0.864865
+  6-cycles      : 467,037   (took 0.0s)
+  8-cycles     : TIMEOUT after 55s
+  10-cycles     : TIMEOUT after 55s
+
+================================================================
