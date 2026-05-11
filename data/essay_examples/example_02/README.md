@@ -42,9 +42,9 @@ maximise local girth but without the algebraic column-selection guarantee.
 
 | | Punctured | 6-free | PEG |
 |---|---|---|---|
-| **6-cycles** | 4,554 | **0** | 779 |
-| **8-cycles** | 126,813 | 51,447 | 44,880 |
-| **10-cycles** | 1,318,871 | 655,128 | 724,162 |
+| **6-cycles** | 4,554 | **0** | 745 |
+| **8-cycles** | 126,813 | 51,447 | 44,816 |
+| **10-cycles** | 1,318,871 | 655,128 | 725,446 |
 
 The 6-free column selection eliminates all 6-cycles and halves the 8/10-cycle
 counts compared to the plain punctured baseline. PEG achieves the fewest
