@@ -108,7 +108,7 @@ class CircularRuler:
             limit = min(self.length,limit)
         for nx in range(limit):
             for marker in self.markers:
-                new_y = (nx+marker)%self.length
+                new_y = (nx-marker)%self.length
                 if new_y >= limit: continue
                 writer_obj[x+nx,y+new_y] = 1
         return writer_obj
