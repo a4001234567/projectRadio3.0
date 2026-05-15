@@ -1,0 +1,37 @@
+================================================================
+Moore matrices  J=3  L=36  N=227  truncate=1
+================================================================
+
+[wt1 (shift)]  shape=(678, 8136)
+  col-deg: [2 3]   row-deg: [35 36]
+  GF(2) rank = 678   k = 7458   rate = 0.916667  (2.4s)
+  4-cycles   = 0  (girth >= 6)
+  6-cycles   = 39,471  (3.5s)
+  8-cycles   = TIMEOUT  (55s)
+  block MDS  = PASS
+
+[wt1 (no-shift)]  shape=(678, 8136)
+  col-deg: [2 3]   row-deg: [35 36]
+  GF(2) rank = 678   k = 7458   rate = 0.916667  (2.4s)
+  4-cycles   = 0  (girth >= 6)
+  6-cycles   = 39,118  (3.4s)
+  8-cycles   = TIMEOUT  (55s)
+  block MDS  = FAIL (146/300)
+
+[wt2 (independent)]  shape=(678, 8136)
+  col-deg: [4 5 6]   row-deg: [71 72]
+  GF(2) rank = 678   k = 7458   rate = 0.916667  (4.5s)
+  4-cycles   = 0  (girth >= 6)
+  6-cycles   = 7,301,519  (3.4s)
+  8-cycles   = TIMEOUT  (55s)
+  block MDS  = PASS
+
+[wt2 (diagonal)]  shape=(678, 8136)
+  col-deg: [5 6]   row-deg: [71 72]
+  GF(2) rank = 678   k = 7458   rate = 0.916667  (4.2s)
+  4-cycles   = 0  (girth >= 6)
+  6-cycles   = 7,202,479  (3.6s)
+  8-cycles   = TIMEOUT  (55s)
+  block MDS  = PASS
+
+================================================================
